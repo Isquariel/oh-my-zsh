@@ -18,9 +18,14 @@ style_chars="$RESET$SOLAR_WHITE"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$style_chars on $style_branch"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY=""
+ZSH_THEME_GIT_PROMPT_DIRTY="$RESET$SOLAR_ORANGE!"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+ZSH_THEME_NVM_PROMPT_PREFIX="⬡ "
+ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 PROMPT='
 $style_user%n$style_chars@$style_host%m$style_chars: $style_path%~$(git_prompt_info)
 $style_chars\$ $RESET'
+
+RPROMPT='$SOLAR_GREEN$(nvm_prompt_info)$RESET'
